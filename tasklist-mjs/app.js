@@ -12,12 +12,15 @@ loadEventListeners();
 function loadEventListeners(){
     // Add task event
     form.addEventListener('submit', addTask);
+    // Remove task event
+    taskList.addEventListener('');
 }
 
 // Add Task
 function addTask(e){
     if(taskInput.value === ''){
         alert('Add a Task');
+        return
     }
 
     // Create li element
@@ -41,4 +44,12 @@ function addTask(e){
     // Clear input
     taskInput.value = '';
     e.preventDefault();
+}
+
+// REmove task
+function removeTask(e){
+    if(e.target){
+        console.log(e.target);
+    }
+    
 }
